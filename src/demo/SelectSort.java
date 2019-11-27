@@ -10,9 +10,13 @@ import java.util.Arrays;
 public class SelectSort {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{3, 2, 5, 7, 1, 6};
+        int[] arr = GenerateArr.generateArray(10000, 100);
+        System.out.println(Arrays.toString(arr));
+        long startTime = System.currentTimeMillis();
         selectSort(arr);
         System.out.println(Arrays.toString(arr));
+        long endTime = System.currentTimeMillis();
+        System.out.println("程序运行时间：" + (endTime - startTime) + "ms");
     }
 
     public static void selectSort(int[] arr) {
