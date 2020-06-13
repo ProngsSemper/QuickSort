@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 3, 5, 2, 4, 6, 8, 10};
+        int[] arr = new int[]{23, 5, 9, 16, 30, 25, 17, 18};
         mergeSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }

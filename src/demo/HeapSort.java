@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class HeapSort {
     public static void main(String[] args) {
-        int[] arr = GenerateArr.generateArray(10000, 100);
+        int[] arr = GenerateArr.generateArray(5, 100);
         System.out.println(Arrays.toString(arr));
         long startTime = System.currentTimeMillis();
         heapSort(arr);
@@ -25,7 +25,7 @@ public class HeapSort {
         for (int i = start; i >= 0; i--) {
             maxHeap(arr, arr.length, i);
         }
-        //先把数组中的第0个和堆中的最后一个数交换位置，再把前面的处理为大顶堆
+        //先把数组中的第0个和堆中的最后一个数交换位置，再把前面的处理为大顶堆，交换位置后较大的数因i--位置固定不变，实现从小到大排序
         for (int i = arr.length - 1; i > 0; i--) {
             int temp = arr[0];
             arr[0] = arr[i];

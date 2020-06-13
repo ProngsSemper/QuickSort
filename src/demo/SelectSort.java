@@ -10,13 +10,14 @@ import java.util.Arrays;
 public class SelectSort {
 
     public static void main(String[] args) {
-        int[] arr = GenerateArr.generateArray(10000, 100);
-        System.out.println(Arrays.toString(arr));
-        long startTime = System.currentTimeMillis();
+        int[] arr = {25, 30, 11, 7, 22, 16, 18, 33, 40, 55};
+//        System.out.println(Arrays.toString(arr));
+//        long startTime = System.currentTimeMillis();
+        System.out.println("begin");
         selectSort(arr);
-        System.out.println(Arrays.toString(arr));
-        long endTime = System.currentTimeMillis();
-        System.out.println("程序运行时间：" + (endTime - startTime) + "ms");
+        System.out.println("end");
+//        long endTime = System.currentTimeMillis();
+//        System.out.println("程序运行时间：" + (endTime - startTime) + "ms");
     }
 
     public static void selectSort(int[] arr) {
@@ -32,6 +33,7 @@ public class SelectSort {
                 arr[i] = arr[minIndex];
                 arr[minIndex] = temp;
             }
+            System.out.println(Arrays.toString(arr));
         }
     }
 }
