@@ -9,12 +9,12 @@ public class Prim {
     public static void main(String[] args) {
         float[][] c = {
                 {0, 0, 0, 0, 0, 0},
-                {0, 0, 34, -1, -1, 12, -1},
-                {0, 34, 0, 46, -1, -1, 19},
-                {0, -1, 46, 0, 17, -1, 25},
-                {0, -1, -1, 17, 0, 38, 25},
-                {0, -1, -1, -1, 38, 0, 26},
-                {0, -1, 19, 25, 25, 26, 0}
+                {0, 0, 34, Float.MAX_VALUE, Float.MAX_VALUE, 12, Float.MAX_VALUE},
+                {0, 34, 0, 46, Float.MAX_VALUE, Float.MAX_VALUE, 19},
+                {0, Float.MAX_VALUE, 46, 0, 17, Float.MAX_VALUE, 25},
+                {0, Float.MAX_VALUE, Float.MAX_VALUE, 17, 0, 38, 25},
+                {0, Float.MAX_VALUE, Float.MAX_VALUE, Float.MAX_VALUE, 38, 0, 26},
+                {0, Float.MAX_VALUE, 19, 25, 25, 26, 0}
         };
 
         prim(6, c);
@@ -39,7 +39,7 @@ public class Prim {
                     j = k;
                 }
             }
-            System.out.println(j + " ,  " + closest[j]);
+            System.out.println(j - 1 + " ,  " + (closest[j] - 1));
             s[j] = true;
             for (int k = 2; k <= n; k++) {
                 if ((c[j][k] < lowcost[k]) && (!s[k])) {
