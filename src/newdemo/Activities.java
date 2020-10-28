@@ -33,8 +33,43 @@ public class Activities {
 
     public static void main(String[] args) {
         //初始化数据s数组记录活动开始时间；f数组记录活动结束时间
-        int[] s = {1, 3, 0, 5, 3, 5, 6, 8, 8, 2, 12};
-        int[] f = {4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
+        int[] s = {3,
+
+                2,
+
+                1,
+
+                9,
+
+                5,
+                4,
+
+                11,
+
+                8
+                ,
+                6,
+
+                7};
+        int[] f = {10,
+
+                4,
+
+                3,
+
+                15,
+
+                8,
+
+                6,
+
+                13,
+
+                12,
+
+                9,
+
+                16};
 
         boolean[] a = new boolean[s.length];
 

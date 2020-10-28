@@ -1,5 +1,7 @@
 package demo;
 
+import java.util.Arrays;
+
 /**
  * @author Prongs
  * @date 2019/11/13 14:56
@@ -8,17 +10,18 @@ package demo;
 public class QuickSort {
     public static void main(String[] args) {
 //        int[] arr = GenerateArr.generateArray(10000, 100);
-//        int[] arr = {8, 4, 3, 7, 1, 5, 6, 2};
+        int[] arr = {5,3,1,9,8,2,4,7};
 //        System.out.println(Arrays.toString(arr));
 //        long startTime = System.currentTimeMillis();
-//        quickSort(arr, 0, arr.length - 1);
+        quickSort(arr, 0, arr.length - 1);
 //        randomQuick(arr,0,arr.length-1);
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
 //        long endTime = System.currentTimeMillis();
 //        System.out.println("程序运行时间：" + (endTime - startTime) + "ms");
     }
 
     public static void quickSort(int[] arr, int start, int end) {
+
         int i, j, temp, t;
         if (start > end) {
             return;
@@ -28,6 +31,7 @@ public class QuickSort {
         //temp就是基准位
         temp = arr[start];
         while (i < j) {
+            System.out.println(Arrays.toString(arr));
             //先看右边，依次往左递减
             while (temp <= arr[j] && i < j) {
                 j--;
